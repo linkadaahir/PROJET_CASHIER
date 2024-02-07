@@ -11,11 +11,11 @@
       <!--ou le dashbord des pages sont importes-->
       <div class="bg-white rounded-[20px] flex-col m-5">
 
-        <pageDashbord1_composant></pageDashbord1_composant>
+        <pageDashbord1_composant @open_modal="togglemodaleTicket()"></pageDashbord1_composant>
 
       </div>
               <!-- la boite de dialogue qui souve au click -->
-            <modaleTicket v-bind:revele="revele"></modaleTicket>
+            <modaleTicket v-bind:revele="revele" v-bind:togglemodaleTicket="togglemodaleTicket"></modaleTicket>
       
     </div>
   </section>
@@ -33,6 +33,11 @@ export default {
     return{
       revele:false
     } 
+  },
+  methods: {
+    togglemodaleTicket: function(){
+      this.revele = !this.revele
+    }
   },
 
 

@@ -570,6 +570,7 @@
 
 
 export default {
+    name:"pageDashbord2_composant",
     props: {
     label: { required: true, type: String },
   },

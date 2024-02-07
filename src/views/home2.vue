@@ -9,13 +9,13 @@
           <HEADER></HEADER>
         </header>
         <!--ou le dashbord des pages sont importes-->
-        <div class="bg-white rounded-[20px] flex-col p-2 overflow-y-scroll">
+        <div v-on:click="togglemodaleTicket" class="bg-white rounded-[20px] flex-col p-2 overflow-y-scroll">
   
           <pageDashbord2_composant></pageDashbord2_composant>
   
         </div>
                 <!-- la boite de dialogue qui souve au click -->
-                <modaleTicket ></modaleTicket>
+                <modaleTicket v-bind:revele="revele" v-bind:togglemodaleTicket="togglemodaleTicket"></modaleTicket>
         
       </div>
     </section>
@@ -28,8 +28,21 @@
   import pageDashbord2_composant from "@/components/pageDashbord2_composant.vue";
   
   export default {
-  
-    components: {
+
+    name: 'home2',
+  data(){
+    return{
+      revele:false
+    } 
+  },
+  methods: {
+    togglemodaleTicket: function(){
+      this.revele = !this.revele
+    }
+  },
+
+
+  components: {
       ASIDE2,
       HEADER,
       modaleTicket,

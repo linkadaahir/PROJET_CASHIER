@@ -209,8 +209,8 @@
         </div>
         <div class="">
           <div class="left-0 top-[92px] absolute flex-col justify-start items-center gap-2.5 inline-flex ">
-            <div v-on:click="togglemodaleTicket"  class="p-2.5 bg-teal-400 text-white bordure rounded-[100px] justify-start items-start gap-2.5 inline-flex ">
-             <a href="#">
+            <div v-on:click="$emit('open_modal')"  class="p-2.5 bg-teal-400 text-white bordure rounded-[100px] justify-start items-start gap-2.5 inline-flex ">
+             
                 <div class="w-6 h-6 relative">
                   <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 24 24">
@@ -218,7 +218,7 @@
                       d="M5 12h14m-7 7V5" />
                   </svg>
                 </div>
-              </a>
+             
             </div>
             <div class="text-[15px] font-medium">New</div>
           </div>
@@ -247,10 +247,16 @@
 
 <script>
 
+
 export default { 
+
+  name:"pageDashbord1_composant",
 
   props: {
   label: { required: true, type: String },
+  emits:['open_modal']
+
+
 },
 
 }
