@@ -4,6 +4,6 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-
-  <RouterView />
+  <RouterView/>
 </template>
+     <!--      </npx tailwindcss -i ./src/style.css -o ./dist/style.css --watch>-->
