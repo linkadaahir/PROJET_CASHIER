@@ -41,7 +41,7 @@
             <div
               class="text-neutral-400 group-hover:text-teal-400 text-xl font-normal font-['Roboto']"
             >
-              <a href="http://localhost:5173/home2"
+              <a href="http://localhost:5174/home2"
                 >Tic<span class="disparition">kets</span></a
               >
             </div>

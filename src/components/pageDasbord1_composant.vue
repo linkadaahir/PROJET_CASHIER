@@ -1,8 +1,7 @@
 <template>
   <div class="pageDasbord1_composant">
-    <div class="flex items-stretch mb-2 w-full flex-col md:flex-row gap-4">
-      <div
-        class="rounded-[20px] border border-neutral-200 flex-col justify-between items-start gap-6.5 p-3 inline-flex mb-24">
+    <div class="flex  mb-2 w-full flex-col md:flex-row md:justify-around gap-4">
+      <div class="rounded-[20px] border border-neutral-200 flex-col justify-between items-start gap-6.5 p-3 inline-flex mb-24">
         <div class="flex-col justify-start items-start flex">
           <div class="mt-2.5 p-3 pl-0">
             <svg class="w-8 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -67,8 +66,9 @@
         </div>
       </div>
 
-      <div class="flex-col justify-between gap-2.5 inline-flex w-3/4">
-        <div class="inline-flex justify-between flex-row mb-6">
+      <div class="flex-col md:justify-end  flex md:w-4/5 ">
+
+        <div class="flex flex-col md:inline-flex md:justify-between md:flex-row mb-6" >
           <div class="flex-col justify-between items-start inline-flex">
             <div class="text-neutral-700 text-xl font-bold">
               Waiting tickets
@@ -78,7 +78,7 @@
             </div>
           </div>
 
-          <div class="rounded-[10px] border border-neutral-200 inline-flex">
+          <div class="rounded-[10px] border border-neutral-200 inline-flex mt-2 md:mt-0">
             <div class="flex mr-1">
               <div class="w-8 h-2 p-2">
                 <svg class="w-7 h-6 text-neutral-400 dark:text-white" aria-hidden="true"
@@ -90,7 +90,7 @@
                 </svg>
               </div>
               <input type="text" name="text" alt="name" id="find" placeholder="find"
-                class="text-stone-300 text-[15px] font-normal outline-none border-none" />
+                class="text-stone-300 text-[15px] font-normal outline-none border-none " />
             </div>
           </div>
         </div>
@@ -126,11 +126,14 @@
                             d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
                         </svg>
                       </div>
-                      <div class="text-neutral-700 text-[15px] font-normal choix">
-                        more
+                      <div class=" md:text-neutral-700 md:text-[15px] md:font-normal md:choix">
+                        <span>more</span>
+                        
                       </div>
                     </div>
                   </div>
+
+                  
                   <div class="px-2.5 py-[5px] bg-teal-400 rounded-[20px] justify-start items-center gap-[5px] flex">
                     <div class="w-5 h-5 relative">
                       <svg class="w-[25px] h-[25px] text-white dark:text-white" aria-hidden="true"
