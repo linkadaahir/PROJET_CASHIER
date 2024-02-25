@@ -19,20 +19,18 @@
             </svg>
 
             <div class="group-hover:text-teal-400 text-2xl font-bold">
-              <a href="#">Hom<span class="disparition">e</span></a>
+              <a href="#">Home</a>
             </div>
           </div>
 
           <div
-            class="gap-5 px-2 group inline-flex justify-star items-center text-teal-400 cursor-pointer rounded-[15px] h-[40px]"
-          >
+            class="gap-5 px-2 group inline-flex justify-star items-center text-teal-400 cursor-pointer rounded-[15px] h-[40px]" >
             <svg
               class="w-6 h-6 group-hover:text-teal-400 text-neutral-400"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
-              viewBox="0 0 24 24"
-            >
+              viewBox="0 0 24 24">
               <path
                 d="M4 5a2 2 0 0 0-2 2v2.5c0 .6.4 1 1 1a1.5 1.5 0 1 1 0 3 1 1 0 0 0-1 1V17a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2.5a1 1 0 0 0-1-1 1.5 1.5 0 1 1 0-3 1 1 0 0 0 1-1V7a2 2 0 0 0-2-2H4Z"
               />
@@ -41,9 +39,7 @@
             <div
               class="text-neutral-400 group-hover:text-teal-400 text-xl font-normal font-['Roboto']"
             >
-              <a href="http://localhost:5174/home2"
-                >Tic<span class="disparition">kets</span></a
-              >
+              <a href="http://localhost:5173/home2">Tickets</a >
             </div>
           </div>
 
@@ -68,13 +64,12 @@
             <div
               class="text-neutral-400 group-hover:text-teal-400 text-xl font-normal font-['Roboto']"
             >
-              <a href="#">Rep<span class="disparition">orts</span></a>
+              <a href="#">Reports</a>
             </div>
           </div>
         </div>
 
-        <div
-          class="gap-5 px-2 group inline-flex justify-star items-center text-teal-400 cursor-pointer rounded-[15px] h-[40px]"
+        <div class="gap-5 px-2 group inline-flex justify-star items-center text-teal-400 cursor-pointer rounded-[15px] h-[40px]"
         >
           <svg
             class="w-6 h-6 group-hover:text-teal-400 text-neutral-400 dark:text-white"
@@ -91,7 +86,7 @@
           <div
             class="text-neutral-400 group-hover:text-teal-400 text-xl font-normal font-['Roboto']"
           >
-         Log<span class="disparition">out</span>
+         Logout
           </div>
         </div>
       </div>

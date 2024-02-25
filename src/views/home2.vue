@@ -18,11 +18,15 @@
                 <modaleTicket v-bind:revele="revele" v-bind:togglemodaleTicket="togglemodaleTicket"></modaleTicket>
         
       </div>
+        <nav class="w-full fixed bottom-0 left-0 right-0 bg-white sm:block md:hidden">
+            <Navbarre></Navbarre>
+        </nav>
     </section>
   </template>
   
   <script>
   import ASIDE2 from "@/components/aside2.vue";
+  import Navbarre from "@/components/NavBarre.vue";
   import HEADER from "@/components/header.vue";
   import modaleTicket from "@/components/modaleTicket.vue";
   import pageDashbord2_composant from "@/components/pageDashbord2_composant.vue";
@@ -44,6 +48,7 @@
 
   components: {
       ASIDE2,
+      Navbarre,
       HEADER,
       modaleTicket,
       pageDashbord2_composant,

@@ -109,7 +109,7 @@
                 </div>
               </td>
 
-              <td class="">Malcolm Lockyer</td>
+              <td class="md:block hidden">Malcolm Lockyer</td>
 
               <td>
                 <div class="flex justify-end w-full">now</div>
@@ -126,7 +126,7 @@
                             d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
                         </svg>
                       </div>
-                      <div class=" md:text-neutral-700 md:text-[15px] md:font-normal md:choix">
+                      <div class=" md:text-neutral-700 md:text-[15px] md:font-normal md:block hidden">
                         <span>more</span>
                         
                       </div>
@@ -136,13 +136,13 @@
                   
                   <div class="px-2.5 py-[5px] bg-teal-400 rounded-[20px] justify-start items-center gap-[5px] flex">
                     <div class="w-5 h-5 relative">
-                      <svg class="w-[25px] h-[25px] text-white dark:text-white" aria-hidden="true"
+                      <svg class="w-[18px] h-[18px] text-white dark:text-white" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
                           d="M1 5.917 5.724 10.5 15 1.5" />
                       </svg>
                     </div>
-                    <div class="text-white text-[15px] font-normal choix">
+                    <div class="text-white text-[15px] font-normal md:block hidden">
                       Validate
                     </div>
                   </div>
@@ -155,7 +155,7 @@
                           d="M6 18 18 6m0 12L6 6" />
                       </svg>
                     </div>
-                    <div class="text-neutral-700 text-[15px] font-normal choix">
+                    <div class="text-neutral-700 text-[15px] font-normal md:block hidden">
                       Cancel
                     </div>
                   </div>
@@ -166,7 +166,7 @@
         </table>
 
         <div class="text-[15px] text-teal-400 font-normal font-['Roboto']">
-          <a href="#" class="outline green_colorr">see more</a>
+          <a href="#" class="outline ">see more</a>
         </div>
       </div>
     </div>
@@ -175,12 +175,12 @@
       <div>
         <span class="text-neutral-400 text-[15px] font-normal font-['Roboto']">welcome dear Rodolph i am
         </span>
-        <span class="green_colorr text-[15px] font-normal font-['Roboto']">CASHIER</span>
+        <span class="text-teal-400 text-[15px] font-normal font-['Roboto']">CASHIER</span>
         <span class="text-neutral-400 text-[15px] font-normal font-['Roboto']">
           what do you need</span>
       </div>
 
-      <div class=" relative">
+      <div class=" relative h-[680px] md:block hidden">
         <div class="w-32 h-32 left-[22px] top-0 absolute justify-center items-center inline-flex disparait">
           <svg width="98" height="88" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
