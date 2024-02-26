@@ -14,8 +14,7 @@
             />
           </div>
 
-          <div
-            class="justify-between items-center gap-2.5 inline-flex bg-neutral-200 p-1.5 rounded-[40px]"
+          <div class="justify-between items-center gap-2.5 inline-flex bg-neutral-200 p-1.5 rounded-[40px]"
           >
             <div class="text-black text-[15px] font-normal font-['Roboto']">
               Rodoph

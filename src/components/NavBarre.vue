@@ -1,7 +1,7 @@
 <template>
-    <div class=" w-full flex items-center justify-between">
+    <div class=" w-full flex items-center justify-between bg-white contenu ">
 
-      <div class="flex-row gap-5 flex m-4">
+      <div class="flex-row gap-5 flex  contenu1">
         <div class="gap-5 px-2 group flex-col justify-center items-center text-teal-400  rounded-[15px] ">
             <a href="http://localhost:5173/home">
                     <svg
@@ -49,11 +49,11 @@
             </div>
         </div>
 
-</div>
+      </div>
 
-      <div class="flex-row gap-5 flex justify-stretch ">
-        <div class="left-0 top-[92px] flex-col justify-start items-center gap-2.5 inline-flex ">
-            <div v-on:click="$emit('open_modal')"  class="p-5 bg-teal-400 text-white bordure rounded-[100px] justify-start items-start gap-2.5 inline-flex ">
+      <div class="flex-row gap-5 flex justify-center contenuhome">
+        <div class="left-0  flex-col justify-start items-center gap-2.5 inline-flex ">
+            <div v-on:click="$emit('open_modal')" class="p-5 bg-teal-400 text-white bordure rounded-[100px] justify-start items-start gap-2.5 inline-flex ">
              
                 <div class="w-6 h-6 relative">
                   <svg class="w-6    h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -64,17 +64,18 @@
                 </div>
              
             </div>
-            <div class="text-[15px] font-medium">New</div>
+            <div class="text-[20px] font-bold">New</div>
         </div>
       </div>
 
 
-      <div class="flex-row gap-5 flex justify-stretch w-1/3 ">
+      <div class="flex-row  flex  contenu2 ">
 
 
-        <div class="gap-5 px-2 group flex-col justify-center items-center text-teal-400 cursor-pointer rounded-[15px] h-[40px] ml-4"
-        >
-        <svg
+
+        <div class="gap-5 px-2 group flex-col justify-center items-center text-teal-400  rounded-[15px] ">
+            <a href="http://localhost:5173/home">
+              <svg
             class="group-hover:text-teal-400 w-8 h-8 text-neutral-400 dark:text-white"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
@@ -92,35 +93,36 @@
           <div
             class="text-neutral-400 group-hover:text-teal-400 text-xl font-normal font-['Roboto']"
           >
-            <a href="http://localhost:5173/home2"
-              >Tic</a
-            >
+            rep
           </div>
+            </a>
+
         </div>
 
 
-        <div class="gap-5 px-2 group flex-col justify-center items-center text-teal-400 cursor-pointer rounded-[15px] h-[40px]"
-        >
-        <svg
-          class="w-8 h-8 group-hover:text-teal-400 text-neutral-400 dark:text-white"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M5 10.9a8.7 8.7 0 0 1 6.4-3.6V6a2 2 0 0 1 2.3-2c.4 0 .7.1 1 .3l5.5 4.3a2.1 2.1 0 0 1 0 3.3l-5.5 4.3a2 2 0 0 1-2 .3 2 2 0 0 1-1.2-1.9v-1C6 15 5.2 19 5.2 19.3a1 1 0 0 1-1 .8 1 1 0 0 1-1-.7A10.2 10.2 0 0 1 5 10.9Z"
-          />
-        </svg>
 
-          <div
-            class="text-neutral-400 group-hover:text-teal-400 text-xl font-normal font-['Roboto']"
-          >
-            <a href="http://localhost:5173/home2"
-              >Tic</a
+        <div v-on:click="$emit('open_modal_Deconnection')" class="gap-5 px-2 group flex-col justify-center items-center text-teal-400  rounded-[15px] ">
+            <a href="#">
+                  <svg
+              class="w-8 h-8 group-hover:text-teal-400 text-neutral-400 dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
             >
-          </div>
+              <path
+                d="M5 10.9a8.7 8.7 0 0 1 6.4-3.6V6a2 2 0 0 1 2.3-2c.4 0 .7.1 1 .3l5.5 4.3a2.1 2.1 0 0 1 0 3.3l-5.5 4.3a2 2 0 0 1-2 .3 2 2 0 0 1-1.2-1.9v-1C6 15 5.2 19 5.2 19.3a1 1 0 0 1-1 .8 1 1 0 0 1-1-.7A10.2 10.2 0 0 1 5 10.9Z"
+              />
+            </svg>
+
+              <div   class="text-neutral-400 group-hover:text-teal-400 text-xl font-normal font-['Roboto']" >
+                log
+              </div>
+            </a>
+
         </div>
+
+
 
       </div>
 
@@ -128,12 +130,37 @@
     </div>
 </template>
 
+<style>
+.contenu1,.contenuhome, .contenu2 {
+  width: 30%;
+
+}
+.contenu1, .contenu2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .contenu  {
+  visibility: hidden;
+}
+ }
+
+</style>
+
 <script>
 
 
-export default {
-  props: {
-  label: { required: true, type: String },
+
+export default { 
+
+  name:"NavBarre",
+
+props: {
+label: { required: true, type: String },
+emits:['open_modal_Deconnection, open_modal']
+
 },
-};
+
+}
 </script>

@@ -11,15 +11,17 @@
         <!--ou le dashbord des pages sont importes-->
         <div v-on:click="togglemodaleTicket" class="bg-white rounded-[20px] flex-col p-2 overflow-y-scroll">
   
-          <pageDashbord2_composant></pageDashbord2_composant>
+          <pageDashbord2_composant @open_modal="togglemodaleTicket()" @open_modal_Deconnection="togglemodaleDeconnection()"></pageDashbord2_composant>
   
         </div>
                 <!-- la boite de dialogue qui souve au click -->
-                <modaleTicket v-bind:revele="revele" v-bind:togglemodaleTicket="togglemodaleTicket"></modaleTicket>
-        
+                <modaleTicket v-bind:revele="revele" v-bind:togglemodaleTicket="togglemodaleTicket"></modaleTicket>    
       </div>
-        <nav class="w-full fixed bottom-0 left-0 right-0 bg-white sm:block md:hidden">
-            <Navbarre></Navbarre>
+      <div>
+        <ModaleDeconnexion  v-bind:reveleDeconnection="reveleDeconnection" v-bind:togglemodaleDeconnection="togglemodaleDeconnection"></ModaleDeconnexion>
+       </div>
+        <nav class="w-full fixed bottom-0 left-0 right-0 ">
+            <Navbarre @open_modal="togglemodaleTicket()" @open_modal_Deconnection="togglemodaleDeconnection()"></Navbarre>
         </nav>
     </section>
   </template>
@@ -29,6 +31,7 @@
   import Navbarre from "@/components/NavBarre.vue";
   import HEADER from "@/components/header.vue";
   import modaleTicket from "@/components/modaleTicket.vue";
+  import modaleDeconnection from "@/components/ModaleDeconnexion.vue";
   import pageDashbord2_composant from "@/components/pageDashbord2_composant.vue";
   
   export default {
@@ -42,6 +45,9 @@
   methods: {
     togglemodaleTicket: function(){
       this.revele = !this.revele
+    },
+    togglemodaleDeconnection: function(){
+      this.reveleDeconnection = !this.reveleDeconnection
     }
   },
 
@@ -51,6 +57,7 @@
       Navbarre,
       HEADER,
       modaleTicket,
+      modaleDeconnection,
       pageDashbord2_composant,
     },
     

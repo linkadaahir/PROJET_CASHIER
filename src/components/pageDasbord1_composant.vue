@@ -1,6 +1,6 @@
 <template>
   <div class="pageDasbord1_composant">
-    <div class="flex  mb-2 w-full flex-col md:flex-row md:justify-around gap-4">
+    <div class="flex  mb-24 w-full flex-col md:flex-row md:justify-around gap-4">
       <div class="rounded-[20px] border border-neutral-200 flex-col justify-between items-start gap-6.5 p-3 inline-flex mb-24">
         <div class="flex-col justify-start items-start flex">
           <div class="mt-2.5 p-3 pl-0">
@@ -66,7 +66,7 @@
         </div>
       </div>
 
-      <div class="flex-col md:justify-end  flex md:w-4/5 ">
+      <div class="flex-col md:justify-end  flex waitingTikect ">
 
         <div class="flex flex-col md:inline-flex md:justify-between md:flex-row mb-6" >
           <div class="flex-col justify-between items-start inline-flex">
@@ -96,15 +96,19 @@
         </div>
 
         <div></div>
+        
 
         <table class="table-auto">
           <tbody>
             <tr v-for="x of [1, 2, 3]">
               <td>
                 <div class="justify-start items-center gap-2.5 inline-flex">
-                  <div class="w-[30px] h-[30px] rounded-full bg-violet-800"></div>
+                  <div class="h-[50px] pr-2.5 justify-start items-center gap-2.5 ">
+                      <img class="h-[50px] rounded-full" src="../../image/Crystal_Clear.png" /> 
+                                                    
+                   </div>
                   <div class="text-neutral-700 font-semibold text-sm">
-                    Alida
+                    laurence
                   </div>
                 </div>
               </td>
@@ -180,7 +184,7 @@
           what do you need</span>
       </div>
 
-      <div class=" relative h-[680px] md:block hidden">
+      <div class=" relative  h-[680px] md:block hidden">
         <div class="w-32 h-32 left-[22px] top-0 absolute justify-center items-center inline-flex disparait">
           <svg width="98" height="88" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -247,6 +251,24 @@
     </div>
   </div>
 </template>
+
+<style>
+.waitingTikect {
+  width: 100%;
+
+}
+.contenu1, .contenu2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .contenu  {
+  visibility: hidden;
+}
+ }
+
+</style>
 
 <script>
 

@@ -69,7 +69,7 @@
           </div>
         </div>
 
-        <div class="gap-5 px-2 group inline-flex justify-star items-center text-teal-400 cursor-pointer rounded-[15px] h-[40px]"
+        <div v-on:click="$emit('open_modal_Deconnection')"  class="gap-5 px-2 group inline-flex justify-star items-center text-teal-400 cursor-pointer rounded-[15px] h-full]"
         >
           <svg
             class="w-6 h-6 group-hover:text-teal-400 text-neutral-400 dark:text-white"
@@ -83,8 +83,7 @@
             />
           </svg>
 
-          <div
-            class="text-neutral-400 group-hover:text-teal-400 text-xl font-normal font-['Roboto']"
+          <div  class="text-neutral-400 group-hover:text-teal-400 text-xl font-normal font-['Roboto']"
           >
          Logout
           </div>
@@ -95,9 +94,17 @@
 <script>
 
 
-export default {
-    props: {
-    label: { required: true, type: String },
-  },
-};
+
+export default { 
+
+name:"aside",
+
+props: {
+label: { required: true, type: String },
+emits:['open_modal_Deconnection']
+
+
+},
+
+}
 </script>
