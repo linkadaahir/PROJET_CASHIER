@@ -5,7 +5,7 @@
       <div  v-if="revele" class="bloc_ModaleTicket fixed left-0 right-0 top-0 bottom-0 z-[999999] bg-opacity-40 rounded-[100px] backdrop-blur-sm justify-center items-center gap-2.5 inline-flex">
 
 
-        <div class="w-[325px] bg-red-200 p-5 rounded-[30px] flex-col justify-start items-end gap-5 inline-flex">
+        <div class="w-[325px] bg-white p-5 rounded-[30px] flex-col justify-start items-end gap-5 inline-flex">
           <div class="self-stretch justify-between items-end inline-flex">
             <div class="text-neutral-700 text-xl font-normal font-['Roboto']">
               New ticket
@@ -20,25 +20,26 @@
           </div>
           <div class="self-stretch h-[278px] flex-col justify-start items-end gap-11 flex">
             <div class="self-stretch h-[204px] flex-col justify-start items-end gap-2.5 flex">
-              <div class="self-stretch h-14 rounded-[10px] flex-col justify-start items-start flex">
+              <div class="self-stretch h-14 mb-2 rounded-[10px] flex-col justify-start items-start flex">
                 <div class="text-neutral-700 text-[15px] font-normal font-['Roboto']">
                   Title
                 </div>
-                <div
-                  class="self-stretch h-[38px] px-2.5 py-[7px] rounded-[10px] border border-neutral-200 justify-start items-center gap-2.5 inline-flex">
-                  <div class="justify-center items-center gap-2.5 flex">
-                    <div class="text-stone-300 text-[15px] font-normal font-['Roboto']">
-                      Enter the ticket title
-                    </div>
-                  </div>
+                
+                <div class="rounded-[10px] border border-neutral-200 flex-col justify-center w-full  flex">
+                        <div  class="self-stretch px-10 py-[2px] rounded-[10px] border border-neutral-200 justify-between items-center gap-2.5 inline-flex">
+                            <div class="justify-center items-center gap-2.5  flex">
+                                <input type="text" name="titleTikect" id="titleTikect" placeholder=" Enter name" class="text-black text-[25px] font-normal font-['Roboto'] outline" />
+                            </div>
+                         </div>
                 </div>
+                 
               </div>
               <div class="self-stretch h-[138px] rounded-[10px] flex-col justify-start items-start flex">
                 <div class="text-neutral-700 text-[15px] font-normal font-['Roboto']">
                   Description
                 </div>
                 <textarea
-                  class="self-stretch grow shrink basis-0 px-2.5 py-[7px] rounded-[10px] border border-neutral-200 justify-start items-center gap-2.5 inline-flex"
+                  class="self-stretch grow shrink basis-0  py-[7px] rounded-[10px] border border-neutral-200 justify-start items-center gap-2.5 inline-flex"
                   placeholder="Enter the ticket title">
                         </textarea>
               </div>

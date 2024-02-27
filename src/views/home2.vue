@@ -9,7 +9,7 @@
           <HEADER></HEADER>
         </header>
         <!--ou le dashbord des pages sont importes-->
-        <div v-on:click="togglemodaleTicket" class="bg-white rounded-[20px] flex-col p-2 overflow-y-scroll">
+        <div class="bg-white rounded-[20px] flex-col p-2 overflow-y-scroll">
   
           <pageDashbord2_composant @open_modal="togglemodaleTicket()" @open_modal_Deconnection="togglemodaleDeconnection()"></pageDashbord2_composant>
   

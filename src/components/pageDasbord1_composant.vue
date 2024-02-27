@@ -89,10 +89,10 @@
                     clip-rule="evenodd" />
                 </svg>
               </div>
-              <input type="text" name="text" alt="name" id="find" placeholder="find"
-                class="text-stone-300 text-[15px] font-normal outline-none border-none " />
+              <input type="text" name="text" alt="name" id="find" placeholder="find" class="text-black text-[25px] font-normal font-['Roboto'] outline"/>
             </div>
           </div>
+          
         </div>
 
         <div></div>
@@ -111,9 +111,9 @@
                     laurence
                   </div>
                 </div>
-              </td>
+              </td> 
 
-              <td class="md:block hidden">Malcolm Lockyer</td>
+              <td class="md:block  hidden">Malcolm Lockyer</td>
 
               <td>
                 <div class="flex justify-end w-full">now</div>
