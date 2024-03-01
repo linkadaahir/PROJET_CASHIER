@@ -23,7 +23,7 @@
                     </svg>
                 </div>
 
-                <form id="form" action="">
+                <form @submit.prevent="login" id="form" action="">
                     <div class="flex-col justify-center gap-5 flex">
                         <div class="text-gray-600 lg:text-[35px] font-bold font-['Roboto']">
                             CASHIER
@@ -66,7 +66,10 @@
                                         <path
                                             d="M7 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm2 1H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
                                     </svg>
-                                    <input type="text" name="nom" id="nom" placeholder=" Enter your Username"
+                                    <label for="user_login"></label>
+                                    <input type="text" name="user_login" id="user_login"
+                                    v-model="user.login"
+                                     placeholder=" Enter your Username"
                                         class="text-black text-[15px] font-normal font-['Roboto'] outline" />
                                 </div>
                             </div>
@@ -81,14 +84,17 @@
                                         <path
                                             d="M14 7h-1.5V4.5a4.5 4.5 0 1 0-9 0V7H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Zm-5 8a1 1 0 1 1-2 0v-3a1 1 0 1 1 2 0v3Zm1.5-8h-5V4.5a2.5 2.5 0 1 1 5 0V7Z" />
                                     </svg>
-                                    <input type="password" name="password" id="pass" placeholder="Enter your password"
+                                    <label for="user_password"></label>
+                                    <input type="password" name="user_password" id="user_password" 
+                                    v-model="user.password"
+                                    
+                                    placeholder="Enter your password"
                                         class="text-black text-[15px] font-normal font-['Roboto'] outline"/>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button
-                        class="px-2.5 py-[5px] mt-10 ml-60 bg-teal-400 rounded-[20px] justify-start items-center gap-[5px] inline-flex">
+                    <button type="submit" class="px-2.5 py-[5px] mt-10 ml-60 bg-teal-400 rounded-[20px] justify-start items-center gap-[5px] inline-flex">
                         <svg class="w-4 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor" viewBox="0 0 16 3">
                             <path
@@ -109,10 +115,20 @@
 <script>
 export default {
     name: "Login",
-    data() {
+    data(){
         return {
-            revele: false,
-        };
+            user:{
+                login:"",
+                password:""
+            }
+        }
     },
+    methods:{
+        login(){
+            console.log("stop form")
+            console.log(this.user)
+        }
+    }
+
 };
 </script>

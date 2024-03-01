@@ -53,7 +53,7 @@
 
       <div class="flex-row gap-5 flex justify-center contenuhome">
         <div class="left-0  flex-col justify-start items-center gap-2.5 inline-flex ">
-            <div v-on:click="$emit('open_modal')" class="p-5 bg-teal-400 text-white bordure rounded-[100px] justify-start items-start gap-2.5 inline-flex ">
+            <div v-on:click="$emit('open_modal')" class="p-3 bg-teal-400 text-white bordure rounded-[100px] justify-start items-start gap-2.5 inline-flex ">
              
                 <div class="w-6 h-6 relative">
                   <svg class="w-6    h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
