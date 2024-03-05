@@ -16,8 +16,8 @@
 
           <div class="justify-between items-center gap-2.5 inline-flex bg-neutral-200 p-1.5 rounded-[40px]"
           >
-            <div class="text-black text-[15px] font-normal font-['Roboto']">
-              Rodoph
+            <div class="text-black text-[15px] font-normal ">
+              {{ userProfile?.name }}
             </div>
             <div
               class="bg-teal-400 flex justify-center items-center p-2.5 text-white bordure rounded-[100px]"
@@ -46,5 +46,33 @@ export default {
     props: {
     label: { required: true, type: String },
   },
+
+  mounted() {
+    this.loadUserProfile();
+  },
+
+  data(){
+    return {
+      userProfile:{
+        name:"",
+        email: ""
+      }
+    }
+  },
+
+  methods: {
+
+    loadUserProfile(){
+      let localUser = JSON.parse(localStorage.getItem('profile'))
+      if(localUser?.user_profile?.length > 0) {
+        this.userProfile = {
+          name: localUser?.user_profile[0]?.discriminator,
+          email: localUser?.user_profile[0]?.email
+
+        }
+      }
+    }
+
+  }
 };
 </script>

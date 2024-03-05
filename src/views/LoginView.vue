@@ -37,7 +37,7 @@
                             </div>
                         </div>
 
-                        <div
+                        <div v-if="request?.error"
                             class="self-stretch px-5 py-2.5 bg-amber-300 bg-opacity-10 rounded-[20px] justify-center items-center gap-2.5 inline-flex">
                             <svg width="316" height="71" viewBox="0 0 316 71" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -66,10 +66,10 @@
                                         <path
                                             d="M7 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm2 1H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
                                     </svg>
-                                    <label for="user_login"></label>
-                                    <input type="text" name="user_login" id="user_login"
-                                    v-model="user.login"
-                                     placeholder=" Enter your Username"
+                                    <label for="user_email"></label>
+                                    <input type="email" name="user_email" id="user_email"
+                                    v-model="user.email"
+                                     placeholder=" Enter your Useremail"
                                         class="text-black text-[15px] font-normal font-['Roboto'] outline" />
                                 </div>
                             </div>
@@ -113,20 +113,43 @@
 <style></style>
 
 <script>
+import axios from 'axios';
+
 export default {
     name: "Login",
+ 
+   
     data(){
+        
         return {
+            request :{
+    "message": "",
+    "error": false,
+    "user_profile": []
+},
             user:{
-                login:"",
+                email:"",
                 password:""
             }
         }
     },
     methods:{
         login(){
-            console.log("stop form")
-            console.log(this.user)
+
+            axios.post('http://localhost:3005/login',this.user)
+            .then( (response) => {
+                this.request = response.data;
+ 
+                if (!this.request?.error) {
+                    localStorage.setItem('profile', JSON.stringify(this.request))
+                    this.$router.push('/home');
+
+                } 
+
+            })
+            .catch( (error) => {
+                this.request.error = true;
+            })
         }
     }
 
